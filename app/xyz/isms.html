@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/banner_isms.js"></script>
+    <style>
+        body,ul,a{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        #header{
+            width:990px;
+            height:36px;
+            line-height: 36px;
+            background: springgreen;
+            margin:0 auto;
+            position:relative;
+        }
+        #show{
+            width:990px;
+            height:500px;
+            background: papayawhip;
+            margin:0 auto;
+        }
+        #welcome{
+            float:right;
+            margin-right:15px;
+        }
+        #header a{
+            text-decoration:none;
+            color:black;
+            font-weight:bold;
+            margin-left:15px;
+            cursor:pointer;
+            padding:0;
+        }
+        #banner img{
+            width:990px;
+            height:640px;
+        }
+        #record,#count{
+            display:none;
+        }
+        #record{
+            position:absolute;
+            left:343px;
+            top:36px;
+        }
+        #count{
+            position:absolute;
+            left:435px;
+            top:36px;
+        }
+    </style>
+    <script>
+        $(function (){
+            //轮播图
+            var imgIndex = 0;
+            var timer;
+            function autoPlay(){
+                //当前元素隐藏
+                $("#banner img").eq(imgIndex).css("display","none");
+                //更新下标
+                imgIndex = ++imgIndex == $("#banner img").length ? 0 : imgIndex;
+                //设置显示
+                $("#banner img").eq(imgIndex).css("display","block");
+
+            }
+            //开启定时器
+            timer = setInterval(autoPlay,2000);
+            //鼠标移入移出
+            $("#banner").mouseover(function (){
+                clearInterval(timer);
+            });
+            $("#banner").mouseout(function (){
+                timer = setInterval(autoPlay,2000);
+            });
+            $("#banner .prev").click(function (){
+                //当前元素隐藏
+                $("#banner img").eq(imgIndex).css("display","none");
+                //更新下标
+                imgIndex = --imgIndex == -1 ? $("#banner img").length-1 : imgIndex;
+                //设置显示
+                $("#banner img").eq(imgIndex).css("display","block");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="header">
+        <a href="#">ISMS</a>
+        <a href="/qinfo">商品信息</a>
+        <a href="#">商品添加</a>
+        <a href="#">商品出库</a>
+        <a id="hrecord">历史记录</a>
+            <ul id="record">
+                <li id="outhistory"><a href="*">出库记录</a></li>
+                <li id="addhistory"><a href="*">入库记录</a></li>
+            </ul>
+        <a id="daco">数据统计</a>
+            <ul id="count">
+                <li id="outdata"><a href="*">出库统计</a></li>
+                <li id="adddata"><a href="*">入库统计</a></li>
+                <li id="profit"><a href="*">利润统计</a></li>
+            </ul>
+        <div id="welcome">
+            <a>欢迎:{{ users }}</a>
+            <a href="#">退出</a>
+        </div>
+    </div>
+    <div id="show">
+        <div id="banner">
+            <img src="banner1.jpg">
+            <img src="banner2.jpg">
+            <img src="banner3.jpg">
+            <img src="banner4.jpg">
+            <img src="banner5.jpg">
+            <img src="banner6.jpg">
+            <img src="banner7.jpg">
+            <img src="banner8.jpg">
+            <img src="banner9.jpg">
+            <img src="banner10.jpg">
+	    </div>
+    </div>
+</body>
+</html>

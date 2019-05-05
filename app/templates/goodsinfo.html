@@ -1,0 +1,26 @@
+{% extends "isms.html" %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block banner %}
+    <form action="/queryinfom" method="post">
+        <h3>查询商品信息</h3>
+        <p>
+            商品编号:<input type='text' name='goodsid'>
+        </p>
+        <p>
+            商品名称:<input type='text' name='goodsname'>
+        </p>
+        <p>
+            起始时间:<input type='date' name='starttime'>
+        </p>
+        <p>
+            终止时间:<input type='date' name='endtime'>
+        </p>
+        <p id="submit">
+            <input type='submit' value='查询'>
+        </p>
+    </form>
+{% endblock %}

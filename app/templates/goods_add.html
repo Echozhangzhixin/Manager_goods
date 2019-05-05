@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+        body,ul,ol{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        #header{
+            width:990px;
+            height:36px;
+            line-height: 36px;
+            background: orange;
+            margin:0 auto;
+        }
+        #header ul>li{
+            float:left;
+            margin-left: 20px;
+
+        }
+        #history>ol,#data>ol{
+            display:none;
+        }
+        #history:hover ol{
+            display: block;
+            position:absolute;
+            background: orange;
+
+        }
+        ol>li:hover {
+            background: gray;
+        }
+        #data:hover ol{
+            display: block;
+            position:absolute;
+            background: orange;
+        }
+        li{
+            font-weight: bold;
+        }
+        #show{
+            width:990px;
+            height:600px;
+            margin:0 auto;
+        }
+        form{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            background: lawngreen;
+            text-align: center;
+            margin-left: 250px;
+        }
+        p{
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="top">
+            <ul id="topline">
+                <li id="isms">ISMS</li>
+                <li id="goodsinfo">商品信息</li>
+                <li id="goodsadd">商品添加</li>
+                <li id="goodsout">商品出库</li>
+                <li id="history">
+                    <span>历史记录</span>
+                    <ol>
+                        <li id="outhistory">出库记录</li>
+                        <li id="addhistory">入库记录</li>
+                    </ol>
+                </li>
+                <li id="data">
+                    <span>数据统计</span>
+                    <ol>
+                        <li id="outdata">出库统计</li>
+                        <li id="adddata">入库统计</li>
+                        <li id="profit">利润统计</li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="">欢迎:</a>
+                </li>
+                <li>
+                    <a href="">退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="show">
+        <form>
+            <h3>商品添加</h3>
+            <p>
+                商品编号：<input type="text" id="goodsnum">
+            </p>
+            <p>
+                商品名称：<input type="text" id="goodsname">
+            </p>
+            <p>
+                商品价格：<input type="text" id="price">
+            </p>
+            <p>
+                商品单位：<input type="text" id="unit">
+            </p>
+            <p>
+                成本价格：<input type="text" id="costprice">
+            </p>
+            <p>
+                商品数量：<input type="text" id="goodscount">
+            </p>
+            <p>
+                商品类别：<input type="text" id="kinds">
+            </p>
+            <p>
+                详细信息：<input type="text" id="goodsinfo">
+            </p>
+            <p>
+                <input type="submit" value="取消" style="margin-top: 3px">
+                <input type="submit" value="确认" style="margin-top: 3px">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

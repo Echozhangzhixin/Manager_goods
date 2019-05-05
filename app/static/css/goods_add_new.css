@@ -1,0 +1,88 @@
+body,ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#header a,p{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#header{
+    width:1500px;
+    height:80px;
+    line-height:80px;
+    background: springgreen;
+    margin:0 auto;
+    position:relative;
+}
+#show{
+    width:1500px;
+    margin:0 auto;
+}
+#welcome{
+    float:right;
+    margin-right:15px;
+}
+#header a,span{
+    text-decoration:none;
+    font-size:25px;
+    color:black;
+    font-weight:bold;
+    margin-left:15px;
+    cursor:pointer;
+    padding:0;
+}
+
+#record a,#count a{
+    font-size:20px;
+    display:block;
+    margin:0;
+}
+#record{
+    position:absolute;
+    left:473px;
+    top:-10px;
+    padding:10px;
+
+}
+#count{
+    position:absolute;
+    left:615px;
+    top:-10px;
+    padding:10px;
+}
+ul,ol{
+/*取消列表项目符号*/
+list-style:none;
+/*清除默认内边距*/
+padding:0;
+width:130px;
+}
+ol{
+    /*默认隐藏*/
+    display:none;
+}
+/*设置内层列表显示*/
+ul>li:hover ol{
+    display:block;
+    background:springgreen;
+
+}
+/*内层列表项鼠标滑过修改背景色*/
+ol li:hover{
+    background-color:gray;
+}
+#hrecord,#record,#count,#daco{
+    text-align:center;
+}
+#hrecord,#daco{
+    font-size:25px;
+    font-weight:bold;
+
+}
+#form1{
+    background:rgba(178,172,178,0.72);
+}
+
+

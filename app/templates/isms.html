@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/banner_isms.js"></script>
+</head>
+<body>
+    <div id="header">
+        <a href="/isms">ISMS</a>
+        <a href="/goodsinfom">商品信息</a>
+        <a href="#">商品添加</a>
+        <a href="#">商品出库</a>
+        <ul id="record">
+            <li id="hrecord">
+                历史记录
+                <ol>
+                    <li><a href="##">出库记录</a></li>
+                    <li><a href="##">入库记录</a></li>
+                </ol>
+            </li>
+        </ul>
+        <ul id="count">
+            <li id="daco">
+                数据统计
+                <ol>
+                    <li><a href="##">出库统计</a></li>
+                    <li><a href="##">入库统计</a></li>
+                    <li><a href="##">利润统计</a></li>
+                </ol>
+            </li>
+        </ul>
+        <div id="welcome">
+            <span>欢迎:{{ users }}</span>
+            <a href="#">退出</a>
+        </div>
+    </div>
+    <div id="banner">
+        {% block banner %}
+        <img src="/static/images/banner1.jpg">
+        <img src="/static/images/banner2.jpg">
+        <img src="/static/images/banner3.jpg">
+        <img src="/static/images/banner4.jpg">
+        <img src="/static/images/banner5.jpg">
+        <img src="/static/images/banner6.jpg">
+        <img src="/static/images/banner7.jpg">
+        <img src="/static/images/banner8.jpg">
+        <img src="/static/images/banner9.jpg">
+        <img src="/static/images/banner10.jpg">
+        {% endblock %}
+    </div>
+</body>
+</html>

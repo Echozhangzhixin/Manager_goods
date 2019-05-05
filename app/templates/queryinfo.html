@@ -1,0 +1,39 @@
+{% extends "isms.html" %}
+
+{% block banner %}
+    <table border="1" width="1500" cellpadding="5px" style="border-collapse:collapse">
+        <tr>
+            <th>商品编号</th>
+            <th>商品名称</th>
+            <th>单位</th>
+            <th>商品价格</th>
+            <th>成本价格</th>
+            <th>库存数量</th>
+            <th>预警数量</th>
+            <th>商品种类</th>
+            <th>状态</th>
+            <th>商品详情</th>
+            <th>创建时间</th>
+            <th>操作</th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{product.product_id}}</td>
+                <td>{{product.product_name}}</td>
+                <td>{{product.unit}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.cost_price}}</td>
+                <td>5000</td>
+                <td>500</td>
+                <td>电器</td>
+                <td>上架</td>
+                <td>家电让生活更美好</td>
+                <td>{{product.create_time}}</td>
+                <td>
+                    <a href="/09-update?id={{product.id}}">修改</a>
+                    <a href="/08-delete?id={{product.id}}">删除</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

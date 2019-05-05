@@ -1,0 +1,39 @@
+{% extends "isms.html" %}
+
+{% block style1 %}
+   <link rel="stylesheet" href="/static/css/goods_add_new.css" type="text/css">
+{% endblock %}
+
+{% block banner %}
+    <form id="form1">
+        <h3>商品添加</h3>
+        <p>
+            商品编号：<input type="text" id="goodsnum">
+        </p>
+        <p>
+            商品名称：<input type="text" id="goodsname">
+        </p>
+        <p>
+            商品价格：<input type="text" id="price">
+        </p>
+        <p>
+            商品单位：<input type="text" id="unit">
+        </p>
+        <p>
+            成本价格：<input type="text" id="costprice">
+        </p>
+        <p>
+            商品数量：<input type="text" id="goodscount">
+        </p>
+        <p>
+            商品类别：<input type="text" id="kinds">
+        </p>
+        <p>
+            详细信息：<input type="text" id="goodsinfo">
+        </p>
+        <p>
+            <input type="submit" value="取消" style="margin-top: 3px">
+            <input type="submit" value="确认" style="margin-top: 3px">
+        </p>
+    </form>
+{% endblock %}
